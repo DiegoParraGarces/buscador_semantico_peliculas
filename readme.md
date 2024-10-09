@@ -14,20 +14,21 @@ Python 3.10 o superior
 Gitbash
 virtualenv
 
-- clonar proyecto
-    \n git clone https://github.com/DiegoParraGarces/buscador_semantico_peliculas.git --- comando en consola
+- clonar proyecto<br>
+    git clone 
+    https://github.com/DiegoParraGarces/buscador_semantico_peliculas.git --- comando en consola
 
-- Acceder a ubicación del proyecto
+- Acceder a ubicación del proyecto<br>
     cd 'url carpeta' --- comando en consola    
 
-- Crear y activar ambiente virtual
-    python -m venv venv           --- comando en consola
+- Crear y activar ambiente virtual<br>
+    python -m venv venv           --- comando en consola<br>
     source venv/Scripts/activate  --- comando en consola
 
-- Instalación librerías
+- Instalación librerías<br>
     pip install -r requirements.txt  --- comando en consola
 
-- Iniciar ejecución proyecto
+- Iniciar ejecución proyecto<br>
     python main_students.py  --- comando en consola
 
 
