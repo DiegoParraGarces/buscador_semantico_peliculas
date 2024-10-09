@@ -15,7 +15,7 @@ Gitbash
 virtualenv
 
 - clonar proyecto
-    git clone https://github.com/DiegoParraGarces/buscador_semantico_peliculas.git --- comando en consola
+    \n git clone https://github.com/DiegoParraGarces/buscador_semantico_peliculas.git --- comando en consola
 
 - Acceder a ubicación del proyecto
     cd 'url carpeta' --- comando en consola    
