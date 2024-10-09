@@ -1,51 +1,51 @@
-# Buscador de películas semántico
 
-Con este proyecto aprenderás las bases de git y docker. También tendrás un acercamiento al uso de vectores para NLP o procesamiento del lenguaje natural con hugging face, esta es la tecnología detrás de herramientas como chatgpt, Llama, o incluso google.
-
-## Objetivos - Entrega preliminar
-
-- Crear un repositorio haciendo uso de git.
-- Crear un archivo readme explicando como ejecutar el proyecto.
-- Subir los cambios necesarios al repositorio para ejecutar el proyecto.
-- Crear un contenedor con docker para ejecutar por consola el proyecto.
-    - ¿Cómo guardamos los datos luego de aplicar la similitud por coseno?
-- Crear una función que cree una nueva columna que va a tener información relevante para los embeddings, ¿tal vez es importante tener el valor ganado de la película, o el nombre del director?.
-
-### Rubrica
-| Funcionalidad (2.5)   | Documentación    (2.5)   |
-| ------------ | ------------ | 
-| El código funciona según las instrucciones, desde un contenedor | Existe documentación clara en formato MarkDown de cómo ejecutar el proyecto. | 
-| El proyecto está en un repositorio de git con acceso al profesor. | El código está correctamente documentado. | 
-|Existe una función para aumentar el contexto de los embeddings | |
-|El proyceto una vez iniciado permite realizar varias búsquedas y para su ejecución con un comando específico||
-
-## Objetivos - Entrega final
-- Crear pruebas unitarias.
-
-- Usar las mejores prácticas teniendo en cuenta el nivel de acople y desacople de los módulos, manejo de errores, etc.
-- Usar y documentar al menos un patrón de diseño.
-- Documentar las funciones y el proyecto (estructura).
-
-### Rúbrica
-| Funcionalidad (2.0)   | Documentación    (0.5)   | Pruebas y calidad (1.5) | Estructura (1.0) |
-| ------------ | ------------ | ------------ | ------------ | 
-| El código funciona según las instrucciones, desde un contenedor docker | Existe documentación clara en formato MarkDown de cómo ejecutar el proyecto. | El test coverage es de **mínimo** 70% | El proyecto está estrucurdo en carpetas separadas lógicamente |
-|  |  | Se usaron buenas prácticas en el código (patrones de diseño, principios solid, decoupling ) |
-|||Hacer uso de excepciones para manejar posibles errores||
+<h1 align="center"> BUSCADOR DE PELÍCULAS SEMÁNTICO </h1>
 
 
-## Bonus (+ en la nota final de la entrega)
-- Usar otro dataset diferente para hacer búsqueda semántica, pueden ser datasets de productos, de preguntas y respuestas, etc. ***+0.1***
-- Crear un EDA completo de los datos usados, y **sustentarlo** en la clase en 10 minutos. ***+0.1***
+# Descripción
+
+Con este buscador semántico, podrás realizar búsquedas de películas ingresando una palabra o frase, este buscador te recomendará varias opciones de películas que estén relacionadas en contexto según tu búsqueda haciendo uso del NLP o procesamiento del lenguaje natural y en base al dataset de kaggle.com denominado como "IMDB top 1000".  
 
 
-## Super bonus (+ en la nota defenitiva de la materia)
-- Hacer uso de una base de datos vectorial para realizar búsquedas, y **sustentarlo** en la clase en 10 minutos. ***+0.1***.
+# Instalación y uso
 
-- Desplegar el contenedor a la nube para ser consumido desde cualquier lugar (por consola o por interfaz), y **sustentarlo** en la clase en 15 minutos. ***+0.1***.
+Incialmente debes tener en tu PC lo siguiente:
+Python 3.10 o superior
+Gitbash
+virtualenv
 
----
-> Nota: 
->* Una vez entregado algo no se reciben cambios. Si se hacen cambios en el repo **TODO** se califica sobre la norma (-0.5 por cada día de retraso).
->* Si no se entrega a tiempo, los bonus valen la mitad.
->* Sobre el bonus, si varias personas utilizan la misma base de datos vectorial, y justifican que *no hubo fraude*, **se dividirá el bonus entre la cantidad de personas**.
+- clonar proyecto
+    git clone https://github.com/DiegoParraGarces/buscador_semantico_peliculas.git --- comando en consola
+
+- Acceder a ubicación del proyecto
+    cd 'url carpeta' --- comando en consola    
+
+- Crear y activar ambiente virtual
+    python -m venv venv           --- comando en consola
+    source venv/Scripts/activate  --- comando en consola
+
+- Instalación librerías
+    pip install -r requirements.txt  --- comando en consola
+
+- Iniciar ejecución proyecto
+    python main_students.py  --- comando en consola
+
+
+Una vez se ejecuta el archivo .py se te indicará el siguiente texto:
+" Please enter a text for looking a movie or "end" to finish: ", es allí donde debes ingesar la palabra u oración y teclear enter para realizar la búsqueda, por consola podrás observar los resultados de las películas relacionadas según tu búsqueda y de nuevo aparecerá el texto para otra búsqueda, en caso de no querer continuar debes ingresar la palabra end para finalizar.
+
+
+# Librerías
+
+| Pandas   | sentence_transformers     |
+
+
+# Autor
+
+Diego Alexander Parra Garcés
+2245281
+UAO
+
+
+
+
