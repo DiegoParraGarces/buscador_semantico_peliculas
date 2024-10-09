@@ -8,11 +8,13 @@ def main(query):
     df = pd.read_csv('./IMDB top 1000.csv')
     # print(df.head())
     # TODO: Completar esta función para realizar búsquedas semánticas con base en el código del archivo test.ipynb
+    
+    # Crear nueva columna concatenando descripción e información y generar los embeddings con esta columna creada
     df['Votes'] = df['Description'] + ' ' + df['Info']
     embeddings = model.encode(df['Votes'],batch_size=64,show_progress_bar=True)
     df['embeddings'] = embeddings.tolist()
 
-    
+    #aplicar modelo y generar nueva columna con la similaridad y organizar de manera descendente
     query_embedding = model.encode([query])[0]
     df['similarity'] = df.apply(lambda x: compute_similarity(x, query_embedding), axis=1)
     df = df.sort_values(by='similarity', ascending=False)
